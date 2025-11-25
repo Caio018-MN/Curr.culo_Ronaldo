@@ -1,107 +1,163 @@
-/* Paleta e fontes */
-:root { 
-  --cor-topo: #010409; /* Parte da foto e nome */
-  --cor-fundo: #0d1117; /* Restante do site */
-  --cor-texto: #e6edf3; /* Texto claro sobre fundo escuro */
-  --cor-destaque: #58a6ff; /* Azul para títulos e links */
+/* PALETA */
+:root {
+  /* Define variáveis globais de cores e fontes para facilitar mudanças no tema */
+  --cor-topo: #010409;
+  --cor-fundo: #0d1117;
+  --cor-texto: #e6edf3;
+  --cor-destaque: #58a6ff;
+  --bg-box: #161b22;
+
   --fonte-titulo: "Lato", sans-serif;
   --fonte-texto: "Open Sans", sans-serif;
 }
 
+/* ---------- GERAL ---------- */
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  font-family: var(--fonte-texto);
-  line-height: 1.6;
+  margin: 0; /* Remove margens padrão */
+  background: var(--cor-fundo); /* Cor de fundo geral do site */
+  color: var(--cor-texto); /* Cor padrão dos textos */
+  font-family: var(--fonte-texto); /* Fonte padrão */
 }
 
-/* TOPO */
 .topo {
-  background-color: var(--cor-topo);
-  text-align: center;
-  padding: 3rem 1rem;
+  background: var(--cor-topo); /* Fundo da seção superior */
+  padding: 3rem 1rem; /* Espaçamento interno */
+  text-align: center; /* Centraliza conteúdo */
 }
 
 .foto-perfil {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--cor-destaque);
+  width: 150px; /* Largura da imagem */
+  height: 150px; /* Altura da imagem */
+  border-radius: 50%; /* Deixa a foto redonda */
+  border: 3px solid var(--cor-destaque); /* Borda destacada */
 }
 
-h1 {
-  font-family: var(--fonte-titulo);
-  font-size: 2rem;
-  margin: 0.8rem 0 0.2rem;
-}
+/* ---------- SEÇÕES ---------- */
 
-h2 {
-  color: var(--cor-destaque);
-  font-weight: normal;
-  margin-top: 0;
-}
-
-/* CONTEÚDO PRINCIPAL */
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 850px; /* Limita largura para leitura confortável */
+  margin: auto; /* Centraliza horizontalmente */
+  padding: 1rem; /* Espaçamento interno */
 }
 
 .secao {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Distância entre seções */
 }
 
 h3 {
-  font-family: var(--fonte-titulo);
-  color: var(--cor-destaque);
-  border-bottom: 2px solid var(--cor-destaque);
-  padding-bottom: 0.5rem;
+  font-family: var(--fonte-titulo); /* Fonte do título */
+  color: var(--cor-destaque); /* Cor do título */
+  border-bottom: 2px solid var(--cor-destaque); /* Linha abaixo do título */
+  padding-bottom: 0.5rem; /* Espaço entre texto e linha */
 }
 
-/* Listas */
-ul {
-  list-style: none;
-  padding-left: 0;
+/* ---------- BOTÕES ---------- */
+
+.btn-expandir,
+.skill-btn {
+  display: inline-block; /* Mantém comportamento tipo botão */
+  background: var(--cor-destaque); /* Cor de fundo */
+  padding: 0.6rem 1rem; /* Tamanho interno */
+  color: #000; /* Cor do texto */
+  border-radius: 6px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Cursor de clique */
+  transition: 0.2s; /* Animação suave */
+  margin-top: 0.7rem; /* Espaço acima */
 }
+
+.btn-expandir:hover,
+.skill-btn:hover {
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
+
+.btn-expandir:active,
+.skill-btn:active {
+  transform: scale(0.95); /* Diminui ao clicar */
+}
+
+/* Oculta os checkboxes */
+/* Eles são usados apenas para ativar as animações da side-box */
+.toggle {
+  display: none;
+}
+
+/* ---------- SIDE BOX ---------- */
+
+.side-box {
+  position: fixed; /* Fixa no lado da tela */
+  top: 0; /* Começa do topo */
+  right: -350px; /* Inicialmente escondida fora da tela */
+  width: 300px; /* Largura da caixa lateral */
+  height: 100%; /* Altura da tela inteira */
+  background: var(--bg-box); /* Cor de fundo da box */
+  padding: 1.5rem; /* Espaçamento interno */
+  transition: 0.4s ease; /* Animação suave ao abrir */
+  border-left: 2px solid var(--cor-destaque); /* Linha de destaque na lateral */
+}
+
+.side-box h4 {
+  color: var(--cor-destaque); /* Cor dos títulos dentro da box */
+}
+
+.btn-fechar {
+  display: inline-block; /* Botão */
+  margin-top: 1rem; /* Espaço acima */
+  cursor: pointer; /* Cursor de clique */
+  background: #222; /* Fundo escuro */
+  color: var(--cor-destaque); /* Texto em destaque */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  border: 1px solid var(--cor-destaque); /* Borda combinando */
+}
+
+/* MOSTRAR BOX QUANDO CHECKED */
+/* Move a side-box para dentro da tela quando o checkbox correspondente está marcado */
+#toggle-sobre:checked ~ #sobre-box,
+#skill1:checked ~ #box1,
+#skill2:checked ~ #box2,
+#skill3:checked ~ #box3,
+#skill4:checked ~ #box4 {
+  right: 0; /* Traz a box para dentro da tela */
+}
+
+/* ---------- SKILLS ---------- */
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 1rem;
+  display: flex; /* Organiza botões lado a lado */
+  flex-wrap: wrap; /* Quebra linha se necessário */
+  gap: 0.8rem; /* Espaço entre os botões */
 }
 
-.skills span {
-  background-color: #161b22;
-  color: var(--cor-texto);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Links */
-a {
-  color: var(--cor-destaque);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Rodapé */
+/* RODAPÉ */
 footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: var(--cor-topo);
-  color: var(--cor-texto);
-  border-top: 1px solid #30363d;
-  font-size: 0.9rem;
+  text-align: center; /* Centraliza texto */
+  padding: 1rem; /* Espaçamento interno */
+  background: var(--cor-topo); /* Mesma cor do cabeçalho */
 }
 
+@media (min-width: 1200px) {
+  main {
+    max-width: 20%;
+  }
+}
 
+@media (min-width: 1600px) {
+  main {
+    max-width: 1450px; /* Aumenta largura em telas maiores */
+  }
 
+  .side-box {
+    right: -450px;
+    width: 400px;
+  }
+
+  h3 {
+    font-size: 1.9rem; /* Aumenta tamanho do título */
+  }
+
+  p, li, label {
+    font-size: 1.4rem; /* Aumenta tamanho do texto */
+  }
+}

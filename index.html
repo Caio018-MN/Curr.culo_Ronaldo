@@ -1,94 +1,143 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currículo</title>
-    <link rel="stylesheet" href="style.css" />
+<!DOCTYPE html> <!-- Define o documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8" /> <!-- Suporte a caracteres especiais (acentos) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ajuste responsivo para celulares -->
+  <title>Currículo</title> <!-- Título exibido na aba do navegador -->
 
-    <!-- Fontes do Google -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />  
-  </head>
-  <body>
-    <header class="topo">
-      <div class="hero">
-        <img src="Imagem .jpg" alt="Foto de perfil" class="foto-perfil" />
-        <h1>Cristiano Ronaldo dos Santos Aveiro</h1>
-        <h2>Jogador de futebol / Criar uma grande carreira no futebol</h2>
-      </div>
-    </header>
+  <!-- Importa o arquivo CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-    <main>
-      <section id="sobre" class="secao">
-        <h3>Sobre Mim</h3>
-        <p>
-          Sou um jovem atleta dedicado e apaixonado por futebol, 
-          com forte determinação em evoluir técnica e fisicamente. Desde cedo, busco aperfeiçoar meus fundamentos, mantendo foco,
-           disciplina e espírito competitivo. Tenho como objetivo alcançar o mais alto nível profissional, 
-           contribuindo para equipes com velocidade, talento e mentalidade vencedora.
-        </p>
-      </section>
+  <!-- Importa as fontes Lato e Open Sans do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
 
-      <section id="sobre" class="secao">
-        <h3>Dados Pessoais</h3>
-        <p>
-          <strong>Nome completo</strong>: Cristiano Ronaldo dos Santos Aveiro <br>
-          <strong>Data de nascimento:</strong> 5 de fevereiro de 1985 <br>
-          <strong>Local de nascimento:</strong> Funchal, Madeira, Portugal <br>
-          <strong>Nacionalidade:</strong> Portuguesa <br>
-          <strong>Altura:</strong> 1,83 m <br>
-         <strong>Posição:</strong> Extremo direito / Avançado
-        </p>
-      </section>
+<body>
 
-      <section id="experiencia" class="secao">
-        <h3>Experiência Profissional</h3>
-        <ul>
-          <li>
-            <strong>Sporting Clube de Portugal</strong> - Atacante / Extremo (2002 - 2003) <br />
-            Descrição das principais atividades e conquistas.
-          </li>
-          <li>
-            <strong>Manchester United Football Club</strong> Atacante / Extremo (2003 – 2009) <br />
-            Descrição das responsabilidades e resultados alcançados.
-          </li>
-        </ul>
-      </section>
+<header class="topo"> <!-- Cabeçalho principal da página -->
+  <div class="hero"> <!-- Container para organizar a parte visual do topo -->
+    <img src="Imagem .jpg" alt="Foto" class="foto-perfil" /> <!-- Foto do perfil -->
+    <h1>Cristiano Ronaldo dos Santos Aveiro</h1> <!-- Nome principal -->
+    <h2>Jogador de Futebol</h2> <!-- Subtítulo / Profissão -->
+  </div>
+</header>
 
-      <section id="formacao" class="secao">
-        <h3>Formação Acadêmica</h3>
-        <ul>
-          <li><strong>Escola/Clube de Formação:</strong> Associação Juvenil Andorinha</li>
-          <li><strong>Sporting Clube de Portugal</strong> Formação nas categorias de base (2000-2002)</li>
-</li>
-        </ul>
-      </section>
+<main> <!-- Conteúdo principal da página -->
 
-      <section id="Habilidades" class="secao">
-        <h3>Habilidades Técnicas</h3>
-        <div class="skills">
-          <span>Drible em velocidade</span>
-          <span>Cruzamentos e jogo aéreo</span>
-          <span>Condicionamento físico e resistência</span>
-          <span>Finalização colocada e de potência</span>
-          <span>Disciplinado nos treinos e rápido assimilador de instruções </span>
-        </div>
-      </section>
-      
-            <section id="contato" class="secao">
-                <h3>Contato</h3>
-                <p>Email: <a href="caionm324@gmail.com">cristianoronaldogmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/caio-mendes-b957a2367/" target="_blank">linkedin.com/in/Cristiano_Ronaldo</a></p>
-              
-              </section>
-        </p>
-      </section>
-    </main>
-    <footer>
-      <p>© 2025 Seu Nome. Todos os direitos reservados.</p>
-    </footer>
-  </body>
+  <!-- SOBRE MIM -->
+  <section class="secao" id="sobre"> <!-- Seção de apresentação pessoal -->
+    <h3>Sobre Mim</h3> <!-- Título da seção -->
+    <p>
+      Sou um atleta dedicado e apaixonado por futebol...
+    </p>
+
+    <!-- CHECKBOX DO SOBRE MIM (usado como gatilho para abrir a side-box) -->
+    <input type="checkbox" id="toggle-sobre" class="toggle">
+
+    <!-- Botão que abre a caixa lateral -->
+    <label class="btn-expandir" for="toggle-sobre">Mais sobre mim</label>
+
+    <!-- CAIXA LATERAL -->
+    <aside class="side-box" id="sobre-box"> <!-- Conteúdo oculto que aparece ao clicar -->
+      <h4>Mais Sobre Mim</h4>
+      <p>
+        Busco evolução constante, treinando intensamente para me tornar um jogador completo...
+      </p>
+      <img src="" alt="">
+      <!-- Botão de fechar (desmarca o checkbox) -->
+      <label for="toggle-sobre" class="btn-fechar">Fechar</label>
+    </aside>
+  </section>
+
+
+  <!-- DADOS PESSOAIS 
+  <section class="secao">  Seção com informações pessoais -->
+    <h3>Dados Pessoais</h3>
+    <p>
+      <strong>Nome completo:</strong> Cristiano Ronaldo dos Santos Aveiro <br>
+      <strong>Data de nascimento:</strong> 05/02/1985 <br>
+      <strong>Nacionalidade:</strong> Portuguesa <br>
+      <strong>Posição:</strong> Extremo / Avançado
+    </p>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="secao"> <!-- Seção com experiências profissionais -->
+    <h3>Experiência Profissional</h3>
+    <ul> <!-- Lista não ordenada -->
+      <li><strong>Sporting</strong> (2002-2003)</li>
+      <li><strong>Manchester United</strong> (2003–2009)</li>
+    </ul>
+  </section>
+
+  <!-- FORMAÇÃO -->
+  <section class="secao"> <!-- Seção com formação acadêmica -->
+    <h3>Formação Acadêmica</h3>
+    <ul>
+      <li>Associação Juvenil Andorinha – Base</li>
+      <li>Sporting – Formação (2000–2002)</li>
+    </ul>
+  </section>
+
+
+  <!-- HABILIDADES -->
+  <section class="secao" id="Habilidades"> <!-- Seção com habilidades técnicas -->
+    <h3>Habilidades Técnicas</h3>
+
+    <div class="skills"> <!-- Container que organiza os botões de skills -->
+
+      <!-- DRIBLE -->
+      <input type="checkbox" id="skill1" class="toggle"> <!-- Checkbox invisível que ativa a side-box -->
+      <label for="skill1" class="skill-btn">Drible em velocidade</label> <!-- Botão de abrir -->
+      <aside class="side-box" id="box1"> <!-- Box lateral com detalhes da habilidade -->
+        <h4>Drible em Velocidade</h4>
+        <p>Grande controle de bola, explosão e agilidade em alta velocidade.</p>
+        <label for="skill1" class="btn-fechar">Fechar</label> <!-- Botão de fechar -->
+      </aside>
+
+      <!-- CRUZAMENTO -->
+      <input type="checkbox" id="skill2" class="toggle">
+      <label for="skill2" class="skill-btn">Cruzamentos e jogo aéreo</label>
+      <aside class="side-box" id="box2">
+        <h4>Cruzamentos</h4>
+        <p>Alta precisão nos passes aéreos e leitura de posicionamento.</p>
+        <label for="skill2" class="btn-fechar">Fechar</label>
+      </aside>
+
+      <!-- CONDICIONAMENTO -->
+      <input type="checkbox" id="skill3" class="toggle">
+      <label for="skill3" class="skill-btn">Condicionamento físico</label>
+      <aside class="side-box" id="box3">
+        <h4>Condicionamento</h4>
+        <p>Resistência e preparo físico acima da média.</p>
+        <label for="skill3" class="btn-fechar">Fechar</label>
+      </aside>
+
+      <!-- FINALIZAÇÃO -->
+      <input type="checkbox" id="skill4" class="toggle">
+      <label for="skill4" class="skill-btn">Finalização</label>
+      <aside class="side-box" id="box4">
+        <h4>Finalização</h4>
+        <p>Excelente precisão e potência no chute.</p>
+        <label for="skill4" class="btn-fechar">Fechar</label>
+      </aside>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTATO -->
+  <section class="secao"> <!-- Seção de contato -->
+    <h3>Contato</h3>
+    <p>Email: cristianoronaldo@gmail.com</p>
+  </section>
+
+</main>
+
+<footer> <!-- Rodapé da página -->
+  <p>© 2025 Seu Nome. Todos os direitos reservados.</p>
+</footer>
+
+</body>
 </html>
