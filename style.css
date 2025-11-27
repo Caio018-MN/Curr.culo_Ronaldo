@@ -33,6 +33,29 @@ body {
   border: 3px solid var(--cor-destaque); /* Borda destacada */
 }
 
+.team-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.teams {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+
+.logo-sportin {
+  width: 100px; /* Largura da imagem */
+  height: auto; /* Altura automática para manter proporção */
+}
+.Manchester-United {
+  width: 105px; /* Largura da imagem */
+  height: auto; /* Altura automática para manter proporção */
+}
+
 /* ---------- SEÇÕES ---------- */
 
 main {
@@ -137,27 +160,30 @@ footer {
   background: var(--cor-topo); /* Mesma cor do cabeçalho */
 }
 
-@media (min-width: 1200px) {
-  main {
-    max-width: 20%;
-  }
-}
-
+/* ---------- MEDIA QUERIES ---------- */
+/* Ajustes para telas maiores */
 @media (min-width: 1600px) {
   main {
-    max-width: 1450px; /* Aumenta largura em telas maiores */
+    max-width: 1620px; /* Aumenta largura em telas maiores */
   }
-
+  /* Aumenta largura da side-box */
   .side-box {
     right: -450px;
     width: 400px;
   }
-
-  h3 {
-    font-size: 1.9rem; /* Aumenta tamanho do título */
+  /* Aumenta tamanhos de fonte para melhor legibilidade */
+  h1 {
+    font-size: 2rem; /* Aumenta tamanho do título principal */
   }
 
-  p, li, label {
-    font-size: 1.4rem; /* Aumenta tamanho do texto */
+  h3,
+  h2 {
+    font-size: 1.6rem; /* Aumenta tamanho do título */
+  }
+
+  p,
+  li,
+  label {
+    font-size: 1.2rem; /* Aumenta tamanho do texto */
   }
 }

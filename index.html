@@ -4,9 +4,13 @@
   <meta charset="UTF-8" /> <!-- Suporte a caracteres especiais (acentos) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ajuste responsivo para celulares -->
   <title>Currículo</title> <!-- Título exibido na aba do navegador -->
+  
+  <!-- Ícone da aba do navegador -->
+<link rel="icon" type="image/x-icon" href="aba1.png">
 
   <!-- Importa o arquivo CSS -->
   <link rel="stylesheet" href="style.css" />
+  
 
   <!-- Importa as fontes Lato e Open Sans do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
@@ -28,7 +32,10 @@
   <section class="secao" id="sobre"> <!-- Seção de apresentação pessoal -->
     <h3>Sobre Mim</h3> <!-- Título da seção -->
     <p>
-      Sou um atleta dedicado e apaixonado por futebol...
+      Sou um jovem atleta dedicado e apaixonado por futebol, 
+      com forte determinação em evoluir técnica e fisicamente. Desde cedo, busco aperfeiçoar meus fundamentos, mantendo foco,
+      disciplina e espírito competitivo. Tenho como objetivo alcançar o mais alto nível profissional, 
+      contribuindo para equipes com velocidade, talento e mentalidade vencedora.
     </p>
 
     <!-- CHECKBOX DO SOBRE MIM (usado como gatilho para abrir a side-box) -->
@@ -39,11 +46,26 @@
 
     <!-- CAIXA LATERAL -->
     <aside class="side-box" id="sobre-box"> <!-- Conteúdo oculto que aparece ao clicar -->
-      <h4>Mais Sobre Mim</h4>
+      <h3>Mais Sobre Mim</h3>
       <p>
-        Busco evolução constante, treinando intensamente para me tornar um jogador completo...
+      Cristiano Ronaldo dos Santos Aveiro nasceu na Madeira, Portugal,
+       e desde muito jovem demonstrou talento e dedicação ao futebol.
+        Aos 12 anos, deixou sua terra natal para integrar a formação do Sporting CP, onde evoluiu técnica e fisicamente,
+         chamando atenção pela velocidade, drible e mentalidade competitiva.
       </p>
-      <img src="" alt="">
+      <p>No Sporting, destacou-se rapidamente nas categorias de base até chegar à equipe principal, 
+        tornando-se um dos jogadores mais promissores da Europa. Sua estreia profissional marcou o início de uma trajetória de disciplina,
+         intensidade e evolução constante.</p> 
+         
+      <p>Em 2003, Cristiano Ronaldo transferiu-se para o Manchester United, onde alcançou fama mundial.
+         Sob o comando de Sir Alex Ferguson, desenvolveu ainda mais suas habilidades, 
+         conquistando títulos importantes como a Premier League e a UEFA Champions League.
+         </p>
+      
+      
+      <br>
+      <br>
+
       <!-- Botão de fechar (desmarca o checkbox) -->
       <label for="toggle-sobre" class="btn-fechar">Fechar</label>
     </aside>
@@ -64,9 +86,15 @@
   <!-- EXPERIÊNCIA -->
   <section class="secao"> <!-- Seção com experiências profissionais -->
     <h3>Experiência Profissional</h3>
-    <ul> <!-- Lista não ordenada -->
-      <li><strong>Sporting</strong> (2002-2003)</li>
-      <li><strong>Manchester United</strong> (2003–2009)</li>
+    <ul class="team-list"> <!-- Lista não ordenada -->
+      <li class="teams">
+        <img src="sportin-logo.png" alt="logo do sportin "class="logo-sportin"/> 
+        <p><strong>Sporting</strong> (2002-2003)</p>
+      </li> 
+      <li class="teams">
+        <img src="manchester-united-logo.png" alt="logo do Manchester United" class="Manchester-United"/> 
+        <p><strong>Manchester United</strong> (2003–2009)</p>
+      </li> 
     </ul>
   </section>
 
@@ -88,19 +116,35 @@
 
       <!-- DRIBLE -->
       <input type="checkbox" id="skill1" class="toggle"> <!-- Checkbox invisível que ativa a side-box -->
+      
       <label for="skill1" class="skill-btn">Drible em velocidade</label> <!-- Botão de abrir -->
       <aside class="side-box" id="box1"> <!-- Box lateral com detalhes da habilidade -->
-        <h4>Drible em Velocidade</h4>
-        <p>Grande controle de bola, explosão e agilidade em alta velocidade.</p>
+       
+        <h3>Drible em Velocidade</h3>
+        <p>Tenho como uma das minhas principais características a capacidade de conduzir a bola em alta velocidade sem perder o controle.
+          Consigo acelerar rapidamente, mudar de direção com eficiência e manter a posse mesmo sob pressão.
+           Essa combinação de velocidade, explosão e técnica me permite vencer duelos individuais,
+            abrir espaços nas defesas adversárias e criar situações de ataque com frequência.
+            Além disso, utilizo fintas rápidas e movimentos curtos para desestabilizar marcadores, 
+            facilitando ultrapassagens pela ala e transições rápidas.</p>
+
         <label for="skill1" class="btn-fechar">Fechar</label> <!-- Botão de fechar -->
       </aside>
 
       <!-- CRUZAMENTO -->
       <input type="checkbox" id="skill2" class="toggle">
+
       <label for="skill2" class="skill-btn">Cruzamentos e jogo aéreo</label>
       <aside class="side-box" id="box2">
-        <h4>Cruzamentos</h4>
-        <p>Alta precisão nos passes aéreos e leitura de posicionamento.</p>
+
+        <h3>Cruzamentos</h3>
+        <p>Possuo excelente precisão nos cruzamentos, sendo capaz de variar entre bolas rasteiras, 
+          curtas e cruzamentos mais altos e curvados conforme a necessidade da jogada.
+           Ao avançar pelas laterais, busco sempre encontrar companheiros bem posicionados dentro da área,
+            criando oportunidades claras de finalização. No jogo aéreo, destaco-me pelo tempo de impulsão,
+             força física e leitura das jogadas, o que me permite vencer disputas e direcionar cabeceios com potência e precisão. 
+             Essa combinação me torna útil tanto no ataque, aparecendo como elemento surpresa, quanto na defesa em bolas paradas.</p>
+
         <label for="skill2" class="btn-fechar">Fechar</label>
       </aside>
 
@@ -108,8 +152,14 @@
       <input type="checkbox" id="skill3" class="toggle">
       <label for="skill3" class="skill-btn">Condicionamento físico</label>
       <aside class="side-box" id="box3">
-        <h4>Condicionamento</h4>
-        <p>Resistência e preparo físico acima da média.</p>
+        <h3>Condicionamento</h3>
+        <p>Meu condicionamento físico é um dos pilares do meu desempenho em campo.
+           Tenho excelente resistência, o que me permite manter ritmo alto durante toda a partida,
+            recompondo defensivamente e participando ativamente do setor ofensivo. Além disso,
+             possuo explosão muscular e força para disputar corpo a corpo com defensores mais pesados,
+              mantendo vantagem em arrancadas e mudanças bruscas de direção.
+               Trabalho constantemente para aprimorar minha preparação, garantindo consistência, 
+               intensidade e regularidade nas performances.</p>
         <label for="skill3" class="btn-fechar">Fechar</label>
       </aside>
 
@@ -117,8 +167,14 @@
       <input type="checkbox" id="skill4" class="toggle">
       <label for="skill4" class="skill-btn">Finalização</label>
       <aside class="side-box" id="box4">
-        <h4>Finalização</h4>
-        <p>Excelente precisão e potência no chute.</p>
+        <h3>Finalização</h3>
+        <p>Tenho um repertório variado de finalização, conseguindo chutar com precisão e 
+          potência com ambos os pés, além de finalizar muito bem com a cabeça. 
+          Sou capaz de marcar gols de longa distância, aproveitar rebotes,
+           concluir cruzamentos e participar de jogadas rápidas dentro da área. 
+           Minha leitura de jogo me ajuda a antecipar movimentos e encontrar espaços para finalizar antes da marcação.
+            Busco constantemente aprimorar meu posicionamento ofensivo,
+             tornando-me uma presença decisiva nas oportunidades criadas ao longo das partidas.</p>
         <label for="skill4" class="btn-fechar">Fechar</label>
       </aside>
 
@@ -131,12 +187,13 @@
   <section class="secao"> <!-- Seção de contato -->
     <h3>Contato</h3>
     <p>Email: cristianoronaldo@gmail.com</p>
+     <p>Telefone: +351 9* *** *78  </p> 
   </section>
 
 </main>
 
 <footer> <!-- Rodapé da página -->
-  <p>© 2025 Seu Nome. Todos os direitos reservados.</p>
+  <p>© 2025 Currículo. Todos os direitos reservados.</p>
 </footer>
 
 </body>
