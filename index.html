@@ -62,10 +62,6 @@
          conquistando títulos importantes como a Premier League e a UEFA Champions League.
          </p>
       
-      
-      <br>
-      <br>
-
       <!-- Botão de fechar (desmarca o checkbox) -->
       <label for="toggle-sobre" class="btn-fechar">Fechar</label>
     </aside>
@@ -195,6 +191,14 @@
 <footer> <!-- Rodapé da página -->
   <p>© 2025 Currículo. Todos os direitos reservados.</p>
 </footer>
+
+<script>
+  const toggle = document.getElementById("toggle-sobre");
+
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("no-scroll", toggle.checked);
+  });
+</script>
 
 </body>
 </html>

@@ -20,6 +20,10 @@ body {
   font-family: var(--fonte-texto); /* Fonte padrão */
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .topo {
   background: var(--cor-topo); /* Fundo da seção superior */
   padding: 3rem 1rem; /* Espaçamento interno */
@@ -32,20 +36,21 @@ body {
   border-radius: 50%; /* Deixa a foto redonda */
   border: 3px solid var(--cor-destaque); /* Borda destacada */
 }
-
+/* Lista de times */
 .team-list {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  padding: 0; /* Remove padding padrão */
+  margin: 0; /* Remove margem padrão */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Organiza itens em coluna */
+  gap: 15px; /* Espaço entre os itens */
 }
 
 .teams {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 15px;
+  /* Container dos logos */
+  display: flex; /* Usa flexbox para layout */
+  gap: 20px; /* Espaço entre os logos */
+  margin-bottom: 15px; /* Espaço abaixo dos logos */
 }
-
 
 .logo-sportin {
   width: 100px; /* Largura da imagem */
@@ -92,7 +97,7 @@ h3 {
 
 .btn-expandir:hover,
 .skill-btn:hover {
-  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
 }
 
 .btn-expandir:active,
@@ -118,6 +123,7 @@ h3 {
   padding: 1.5rem; /* Espaçamento interno */
   transition: 0.4s ease; /* Animação suave ao abrir */
   border-left: 2px solid var(--cor-destaque); /* Linha de destaque na lateral */
+  overflow-y: auto; /* Permite rolagem se o conteúdo for maior que a tela */
 }
 
 .side-box h4 {
@@ -125,8 +131,10 @@ h3 {
 }
 
 .btn-fechar {
-  display: inline-block; /* Botão */
-  margin-top: 1rem; /* Espaço acima */
+  display: block; /* Block -> ocupa toda a largura */
+  width: 48px; /* Largura fixa */
+  margin-top: 20px; /* separa do texto */
+  margin-bottom: 40px; /* espaço para o scroll final */
   cursor: pointer; /* Cursor de clique */
   background: #222; /* Fundo escuro */
   color: var(--cor-destaque); /* Texto em destaque */
@@ -143,6 +151,10 @@ h3 {
 #skill3:checked ~ #box3,
 #skill4:checked ~ #box4 {
   right: 0; /* Traz a box para dentro da tela */
+}
+
+#toggle-sobre:checked ~ #sobre-box {
+  right: 0;
 }
 
 /* ---------- SKILLS ---------- */
